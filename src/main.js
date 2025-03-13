@@ -1,9 +1,10 @@
 import plugin from '../plugin.json';
 
-class AcodePlugin {
+class TimeZap {
 
   async init() {
-    // plugin initialisation 
+    window.alert("TimeZap Works");
+    window.toast("TimeZap worked",4000);
   }
 
   async destroy() {
@@ -12,7 +13,7 @@ class AcodePlugin {
 }
 
 if (window.acode) {
-  const acodePlugin = new AcodePlugin();
+  const acodePlugin = new TimeZap();
   acode.setPluginInit(plugin.id, async (baseUrl, $page, { cacheFileUrl, cacheFile }) => {
     if (!baseUrl.endsWith('/')) {
       baseUrl += '/';
